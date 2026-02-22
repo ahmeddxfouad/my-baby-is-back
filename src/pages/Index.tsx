@@ -1,13 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import HeroSection from "@/components/HeroSection";
+import HighlightsSection from "@/components/HighlightsSection";
+import CountdownCard from "@/components/CountdownCard";
+import TimelineSection from "@/components/TimelineSection";
+import HealthCheckSection from "@/components/HealthCheckSection";
+import PhotoGallery from "@/components/PhotoGallery";
+import FooterSection from "@/components/FooterSection";
+import PrintButton from "@/components/PrintButton";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <main className="min-h-screen bg-background">
+      <div className="container mx-auto max-w-2xl py-6">
+        <PrintButton />
+        <HeroSection />
+        <HighlightsSection />
+        <CountdownCard />
+        <TimelineSection />
+        <HealthCheckSection />
+        <PhotoGallery />
+        <FooterSection />
       </div>
-    </div>
+    </main>
   );
 };
 
