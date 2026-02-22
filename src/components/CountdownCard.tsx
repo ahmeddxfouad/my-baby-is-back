@@ -25,17 +25,17 @@ const CountdownCard = () => {
   }, []);
 
   return (
-    <section className="mb-8">
-      <div className="bg-rose-soft rounded-2xl p-8 text-center">
-        <p className="text-sm text-muted-foreground mb-2">Until we're together again</p>
-        <p className="text-6xl font-bold text-primary mb-2" style={{ fontFamily: "Georgia, serif" }}>
+    <section className="mb-12">
+      <div className="bg-rose-soft rounded-2xl p-10 md:p-12 text-center">
+        <p className="text-sm text-muted-foreground mb-3">Until we're together again</p>
+        <p className="text-7xl md:text-8xl font-bold text-primary mb-3" style={{ fontFamily: "Georgia, serif" }}>
           {daysLeft}
         </p>
-        <p className="text-lg text-foreground">
+        <p className="text-xl text-foreground">
           {daysLeft === 1 ? "day to go" : "days to go"} ❤️
         </p>
         <noscript>
-          <p className="text-lg text-foreground mt-2">7 days to go ❤️</p>
+          <p className="text-xl text-foreground mt-2">7 days to go ❤️</p>
         </noscript>
       </div>
     </section>
