@@ -9,16 +9,16 @@ const highlights = [
 
 const HighlightsSection = () => {
   return (
-    <section className="mb-8">
-      <h2 className="text-2xl text-foreground mb-5 text-center">✨ Highlights</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <section className="mb-12">
+      <h2 className="text-3xl text-foreground mb-6 text-center">✨ Highlights</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
         {highlights.map((h, i) => (
           <div
             key={i}
-            className="bg-card rounded-xl p-5 border border-border hover:bg-accent transition-colors"
+            className="bg-card rounded-xl p-6 border border-border hover:bg-accent transition-colors"
           >
-            <div className="text-2xl mb-2">{h.emoji}</div>
-            <h3 className="font-semibold text-foreground mb-1 font-sans">{h.title}</h3>
+            <div className="text-3xl mb-3">{h.emoji}</div>
+            <h3 className="font-semibold text-foreground mb-1 text-lg">{h.title}</h3>
             <p className="text-sm text-muted-foreground">{h.desc}</p>
           </div>
         ))}
