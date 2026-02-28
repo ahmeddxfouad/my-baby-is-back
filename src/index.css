@@ -4,35 +4,43 @@
 
 @layer base {
   :root {
-    --background: 30 50% 97%;
-    --foreground: 20 20% 20%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 30 40% 95%;
-    --card-foreground: 20 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 30 50% 97%;
-    --popover-foreground: 20 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 350 60% 55%;
-    --primary-foreground: 30 50% 97%;
+    --primary: 0 72% 30%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 30% 90%;
-    --secondary-foreground: 20 20% 25%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 30 20% 92%;
-    --muted-foreground: 20 10% 45%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 350 40% 90%;
-    --accent-foreground: 350 60% 35%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 72% 30%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 30 25% 88%;
-    --input: 30 25% 88%;
-    --ring: 350 60% 55%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 72% 30%;
 
-    --radius: 0.75rem;
+    --radius: 0rem;
+
+    /* News tokens */
+    --news-red: 0 72% 30%;
+    --news-dark: 0 0% 10%;
+    --news-gray: 0 0% 55%;
+    --news-light-gray: 0 0% 94%;
+    --news-border: 0 0% 80%;
+    --news-highlight: 45 100% 95%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -42,16 +50,6 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-
-    /* Custom tokens */
-    --rose-soft: 350 50% 94%;
-    --rose-medium: 350 45% 80%;
-    --warm-gold: 38 70% 60%;
-    --warm-gold-soft: 38 50% 92%;
-    --timeline-line: 350 30% 85%;
-    --timeline-dot: 350 60% 55%;
-    --hero-gradient-from: 350 50% 94%;
-    --hero-gradient-to: 30 50% 97%;
   }
 }
 
@@ -62,41 +60,37 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  }
-
-  h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, "Times New Roman", Times, serif;
   }
 }
 
 @layer utilities {
-  .bg-hero-gradient {
-    background: linear-gradient(180deg, hsl(var(--hero-gradient-from)), hsl(var(--hero-gradient-to)));
+  .font-sans-news {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
-  .bg-rose-soft {
-    background-color: hsl(var(--rose-soft));
+  .text-news-red {
+    color: hsl(var(--news-red));
   }
 
-  .bg-warm-gold-soft {
-    background-color: hsl(var(--warm-gold-soft));
+  .bg-news-red {
+    background-color: hsl(var(--news-red));
   }
 
-  .text-warm-gold {
-    color: hsl(var(--warm-gold));
+  .bg-news-dark {
+    background-color: hsl(var(--news-dark));
   }
 
-  .border-timeline {
-    border-color: hsl(var(--timeline-line));
+  .bg-news-light {
+    background-color: hsl(var(--news-light-gray));
   }
 
-  .bg-timeline-dot {
-    background-color: hsl(var(--timeline-dot));
+  .border-news {
+    border-color: hsl(var(--news-border));
   }
 
-  .bg-rose-medium {
-    background-color: hsl(var(--rose-medium));
+  .bg-news-highlight {
+    background-color: hsl(var(--news-highlight));
   }
 }
 

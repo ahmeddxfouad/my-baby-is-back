@@ -25,19 +25,17 @@ const CountdownCard = () => {
   }, []);
 
   return (
-    <section className="mb-12">
-      <div className="bg-rose-soft rounded-2xl p-10 md:p-12 text-center">
-        <p className="text-sm text-muted-foreground mb-3">Until we're together again</p>
-        <p className="text-7xl md:text-8xl font-bold text-primary mb-3" style={{ fontFamily: "Georgia, serif" }}>
-          {daysLeft}
-        </p>
-        <p className="text-xl text-foreground">
-          {daysLeft === 1 ? "day to go" : "days to go"} ❤️
-        </p>
-        <noscript>
-          <p className="text-xl text-foreground mt-2">7 days to go ❤️</p>
-        </noscript>
-      </div>
+    <section className="bg-news-red text-primary-foreground p-6 mb-6">
+      <h3 className="text-sm font-sans-news font-bold uppercase tracking-wide mb-3">
+        ⚡ Live Countdown
+      </h3>
+      <p className="text-5xl font-bold leading-none mb-1">{daysLeft}</p>
+      <p className="text-lg">
+        {daysLeft === 1 ? "day" : "days"} until reunion ❤️
+      </p>
+      <noscript>
+        <p className="text-lg mt-2">7 days to go ❤️</p>
+      </noscript>
     </section>
   );
 };
