@@ -12,71 +12,65 @@ const photos = [
   { src: us1, caption: "Making it official ✨", message: "The day everything changed. I knew you were the one, amora ❤️" },
   { src: us2, caption: "Boss moves only 💼", message: "Look at us being all grown up and professional 😂❤️" },
   { src: us3, caption: "Family vibes 🥰", message: "My favorite people in the whole world, all in one place." },
-  { src: us4, caption: "Snow day adventures ❄️", message: "We were freezing but your smile kept me warm, wallahi 🥹" },
-  { src: us5, caption: "Our fairytale moment 🌿", message: "You looked like a dream. I still can't believe you're mine." },
-  { src: us6, caption: "Coffee date ☕", message: "Simple moments with you are my favorite. Caprese Pesto & you 😍" },
+  { src: us4, caption: "Snow day ❄️", message: "We were freezing but your smile kept me warm, wallahi 🥹" },
+  { src: us5, caption: "Our fairytale 🌿", message: "You looked like a dream. I still can't believe you're mine." },
+  { src: us6, caption: "Coffee date ☕", message: "Simple moments with you are my favorite 😍" },
   { src: us7, caption: "The OG duo 👶", message: "Before everything, there was us. Some things never change ❤️" },
 ];
 
 const PhotoGallery = () => {
-  const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null);
+  const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <section className="mb-12">
-      <h2 className="text-3xl text-foreground mb-2 text-center">Us Together 📸</h2>
-      <p className="text-sm text-muted-foreground text-center mb-8">Click on any photo for a little message ❤️</p>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <section>
+      <h3 className="text-sm font-sans-news font-bold uppercase tracking-wide text-news-red mb-3">
+        📸 Multimedia
+      </h3>
+      <div className="grid grid-cols-2 gap-1.5">
         {photos.map((photo, i) => (
           <div
             key={i}
-            className="rounded-xl overflow-hidden bg-card border border-border cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-            onClick={() => setSelectedPhoto(selectedPhoto === i ? null : i)}
+            className="relative cursor-pointer overflow-hidden group"
+            onClick={() => setSelected(selected === i ? null : i)}
           >
             <img
               src={photo.src}
               alt={photo.caption}
               loading="lazy"
-              className="aspect-square object-cover w-full"
+              className="w-full aspect-square object-cover group-hover:opacity-80 transition-opacity"
             />
-            <div className="px-3 py-2">
-              <p className="text-sm text-foreground font-medium text-center">
-                {photo.caption}
-              </p>
-              {selectedPhoto === i && (
-                <p className="text-xs text-muted-foreground text-center mt-2 pb-1 animate-fade-in">
-                  {photo.message}
-                </p>
-              )}
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 px-2 py-1">
+              <p className="text-white text-[10px] font-sans-news truncate">{photo.caption}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Overlay for selected photo */}
-      {selectedPhoto !== null && (
+      {/* Lightbox */}
+      {selected !== null && (
         <div
-          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedPhoto(null)}
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelected(null)}
         >
           <div
-            className="bg-card rounded-2xl overflow-hidden max-w-lg w-full shadow-2xl"
+            className="bg-card max-w-lg w-full shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={photos[selectedPhoto].src}
-              alt={photos[selectedPhoto].caption}
+              src={photos[selected].src}
+              alt={photos[selected].caption}
               className="w-full max-h-[60vh] object-contain bg-black/10"
             />
-            <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {photos[selectedPhoto].caption}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {photos[selectedPhoto].message}
+            <div className="p-5">
+              <h4 className="text-lg font-bold text-foreground mb-1">
+                {photos[selected].caption}
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {photos[selected].message}
               </p>
               <button
-                onClick={() => setSelectedPhoto(null)}
-                className="mt-4 text-sm text-primary hover:underline"
+                onClick={() => setSelected(null)}
+                className="mt-3 text-xs text-news-red font-sans-news hover:underline"
               >
                 Close ✕
               </button>
