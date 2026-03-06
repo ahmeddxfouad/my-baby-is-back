@@ -1,27 +1,27 @@
 const moreNews = [
   {
     category: "Daily Life",
-    title: "\"Sbah Elkheer Babe\" — Morning Greetings Continue Uninterrupted for 15 Days",
+    title: "\"Sbah Elkheer\" — Morning Greetings Continue Uninterrupted for 15 Consecutive Days",
   },
   {
     category: "Logistics",
-    title: "Surprise Delivery Attempt Fails as Cake Shop Messes Up Order",
+    title: "Surprise Delivery Attempt Fails After Local Shop Reportedly Mishandles Order",
   },
   {
     category: "Entertainment",
-    title: "Maryouma Spotted on TV; Boyfriend Sends YouTube Link Immediately",
+    title: "Local Celebrity Spotted on National Television; Clip Shared Widely Online",
   },
   {
     category: "Health",
-    title: "Cold Strikes on Final Day; Football Blamed as Contributing Factor",
+    title: "Common Cold Strikes on Final Day of Coverage Period; Physical Activity Cited as Factor",
   },
   {
     category: "Society",
-    title: "Mom-to-Mom Coordination Underway to Deliver Secret Package",
+    title: "Family Coordination Underway to Deliver Care Package Across Regions",
   },
   {
-    category: "Motivation",
-    title: "\"We'll Make Up for All This When You're Back\" — A Promise Renewed",
+    category: "Opinion",
+    title: "\"We Will Make Up for All This\" — Editorial on Patience and Reunion",
   },
 ];
 

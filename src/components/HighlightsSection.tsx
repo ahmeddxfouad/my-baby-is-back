@@ -1,38 +1,38 @@
-import us2 from "@/assets/us-2.png";
-import us4 from "@/assets/us-4.png";
+import newsEducation from "@/assets/news-education.jpg";
+import newsValentine from "@/assets/news-valentine.jpg";
 
 const articles = [
   {
     category: "Education",
     title: "Local Student Scores 26/30 in Final Exam After Grueling Midterm Series",
     summary:
-      "After a week of intense studying from Feb 7–11, the last exam concluded with a celebrated score of 26/30. \"Hard work paid off, babe,\" the student reportedly said.",
-    image: us4,
+      "After a week of intense studying from Feb 7 to 11, the last exam concluded with a celebrated score of 26/30. The student described the result as a milestone achievement following a demanding academic period.",
+    image: newsEducation,
   },
   {
     category: "Holidays",
-    title: "Valentine's Day: \"Next Year Together in Our Home,\" Promises Long-Distance Boyfriend",
+    title: "Valentine's Day Sees Record Expressions of Long-Distance Affection Nationwide",
     summary:
-      "On Feb 14, amid feelings of longing, a heartfelt message was sent: \"Happy Valentine's Day… next year together in our home ❤️❤️.\" Celebrations were reportedly solo but full of love.",
-    image: us2,
+      "On Feb 14, amid widespread feelings of longing across separated families, heartfelt messages were exchanged. \"Next year together in our home,\" one resident promised, echoing a sentiment shared by thousands.",
+    image: newsValentine,
   },
 ];
 
 const smallArticles = [
   {
     category: "Religion",
-    title: "Ramadan Kareem: First Fasting Day Observed with Half-Sleeves & Early Laundry",
-    summary: "\"ربنا يهونها عليكي\" — sunny weather reported, laundry hung at dawn.",
+    title: "Ramadan Kareem: First Fasting Day Observed Amid Unseasonably Warm Weather",
+    summary: "Sunny conditions and early morning routines marked the beginning of the holy month across the region.",
   },
   {
     category: "Sports",
-    title: "Football Match Leaves Local Man Sore; Gym Motivation at All-Time High",
-    summary: "Body in bad shape, weight lost — but spirits remain unbreakable.",
+    title: "Local Football Match Leaves Players Sore; Gym Attendance on the Rise",
+    summary: "Community sports participation continues to grow despite physical toll on amateur athletes.",
   },
   {
     category: "Weather",
     title: "Unexpected Sunny Spell Brings Half-Sleeve Weather to the Region",
-    summary: "\"Today is sunny 😂😂😂\" — sources report perfect conditions for outdoor activities.",
+    summary: "Meteorologists report ideal conditions for outdoor activities as temperatures climb above seasonal averages.",
   },
 ];
 
